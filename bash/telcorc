@@ -1,0 +1,10 @@
+# Telcobase env
+export TELCOBASE_CONF=~/mmdb/INI/telcobase.conf
+#export TELCOBASE_DIR=~/workspace/telcoware/telcobase3
+export TELCOBASE_DIR=~/workspace/telcobase3
+export TELCOBASE_HOME=${HOME}/telcobase_release/telcobase_release-3.3.0-64bit-RHEL7.3
+#export TELCOBASE_HOME=${TELCOBASE_DIR}/release
+export THREAD_STACK_SIZE=2097152
+
+export PATH=$TELCOBASE_HOME/bin:~/mmdb/telcobase_scripts:/bin:~/bin/scripts:~/scripts:$PATH:/sbin:.
+export LD_LIBRARY_PATH=$TELCOBASE_HOME/lib:$LD_LIBRARY_PATH

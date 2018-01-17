@@ -1,0 +1,6 @@
+#!/bin/sh
+
+find . -name "*.[hcy]"
+
+
+
