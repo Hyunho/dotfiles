@@ -11,3 +11,5 @@
     cdiff = diff --cached
     wdiff = diff --word-diff=color
     s = status
+[core]
+	editor = vim

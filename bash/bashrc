@@ -19,7 +19,31 @@ export TELCOBASE_CONF=~/mmdb/INI/telcobase.conf
 export TELCOBASE_HOME=${HOME}/telcobase_release/telcobase_release-3.3.0-64bit-RHEL7.3
 export THREAD_STACK_SIZE=2097152
 
-export PATH=$TELCOBASE_HOME/bin:~/mmdb/telcobase_scripts:/bin:~/bin/scripts:~/scripts:$PATH:/sbin:.
+export PATH=$HOME/dotfiles/bin:$TELCOBASE_HOME/bin:~/mmdb/telcobase_scripts:/bin:~/bin/scripts:~/scripts:$PATH:/sbin:.
 export LD_LIBRARY_PATH=$TELCOBASE_HOME/lib:$LD_LIBRARY_PATH
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias emacs='emacs -nw'
+alias em='emacs -nw'
+
+
+#source $HOME/.cargo/env
+
+export PATH=/home/hyunho/Workspace/gcloud/kubernetes/client/bin:$PATH
+
+# go language
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
+
+# display git branch 
+git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PS1="\u@\[\033[32m\]\w\[\033[33m\]\$(git_branch)\[\033[00m\]\$ " 
